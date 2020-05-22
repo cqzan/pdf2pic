@@ -7,7 +7,6 @@ Created on Thu May 21 19:17:29 2020
 
 import fitz
 import os
-import datetime
  
 def pyMuPDF_fitz(pdfPath, imagePath):
     pdfDoc = fitz.open(pdfPath)
@@ -37,6 +36,7 @@ def pyMuPDF_fitz(pdfPath, imagePath):
             pix.writePNG(path)#将图片写入指定的文件夹内 
             print("已保存第"+str(pg)+'张')    
 def file_name():
+ #目录下文件名提取
     list_name=[]
     for  root,dirs,files in os.walk("E:\数据\发票\"): 
        for file in files:
